@@ -1,0 +1,11 @@
+.section-advantages {
+    padding: 50px 0;
+}
+
+.advantages {
+    &__list {
+        @media screen and (min-width: $w576) {
+            display: flex;
+        }
+    }
+}

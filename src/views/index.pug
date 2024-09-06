@@ -1,0 +1,40 @@
+extends layouts/main
+
+block variables
+  include ../data/data.pug
+  - const title = "Lanai"
+ 
+
+block main
+
+  include ../blocks/modules/callback-block/callback-block
+  include ../blocks/modules/digits-block/digits-block
+  include ../blocks/modules/portfolio-block/portfolio-block
+  include ../blocks/modules/video-block/video-block
+  include ../blocks/modules/advantages/advantages
+  include ../blocks/modules/form-block/form-block
+  include ../blocks/modules/products-block/products-block 
+  include ../blocks/modules/your-project/your-project
+  include ../blocks/modules/bgimage-block/bgimage-block
+  include ../blocks/modules/main-banner/main-banner
+  include ../blocks/modules/review-block/review-block
+
+  +main-banner
+  +callback-block
+  +digits-block
+  +portfolio-block
+  +video-block
+  +advantages
+  +form-block
+  +products-block 
+  +your-project
+  +bgimage-block
+  +review-block
+   
+   
+
+ 
+ 
+block scripts
+  script(src="/js/vendor.js") 
+  script(src="/js/common.js") 

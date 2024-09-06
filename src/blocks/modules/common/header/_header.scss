@@ -1,0 +1,64 @@
+.header {
+
+    padding: 12px 0;
+
+    @media screen and (min-width: $w1440) {
+        padding: 20px 0;
+    }
+
+    &__wrp {
+        display: flex;
+        align-items: center;
+    }
+
+    &__burger {
+        display: none;
+    }
+
+    &__logo {
+        & .bgimage {
+            width: 154px;
+            height: 100px;
+            @include bgimage-contain;
+        }
+    }
+
+    &__nav {
+
+        @media screen and (min-width: $w1440) {
+            padding-left: 30px;
+        }
+
+        & ul {
+            display: flex;
+
+            & li {
+                padding: 0 12px;
+
+                @media screen and (min-width: $w1440) {
+                    padding: 0 18px;
+                }
+            }
+        }
+    }
+
+    &__contacts {
+        margin-left: auto;
+
+        display: flex;
+        align-items: center;
+    }
+
+    &__contact {
+        margin-left: 12px;
+    }
+
+
+}
+
+.header-phone {
+    & a {
+        font-weight: 800;
+        font-size: 17px;
+    }
+}

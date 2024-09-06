@@ -1,0 +1,29 @@
+ 
+.header
+    .container
+        .header__wrp
+            .header__burger
+                .btn-burger(data-menu="open") 
+                    i
+                    i
+                    i
+
+            .header__logo
+                a(href='/'): +bgimage('/img/common/logo.png')
+            
+            .header__nav
+                nav
+                    ul
+                        each item in app.mainMenu
+                            li: a(href=item.href)= item.text
+
+            .header__contacts
+                .header__contact
+                    .header-phone 
+                        a(href='tel:+13057777886') +13057777886
+
+                .header__contact
+                    .header-callback
+                        button.btn(data-modal="/parts/_popup-callback.html") 
+                            +icons('#ic_phone')
+                            span Call us
