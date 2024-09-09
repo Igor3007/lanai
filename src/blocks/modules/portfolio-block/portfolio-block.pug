@@ -1,4 +1,21 @@
 mixin portfolio-block
-    section.section-portfolio-block
+    section.section-portfolio-block(id="Projects")
         .container 
-            .portfolio-block portfolio-block
+            .portfolio-block
+                .portfolio-block__title
+                    .line-header Portfolio
+                    h2 Our projects
+                .portfolio-block__slider
+                    .splide(data-slider="project")
+                        .splide__track
+                            .splide__list
+                                .splide__slide
+                                    a(href='/img/common/pr1.jpg' data-fslightbox="gallery"): +picture('/img/common/pr1')
+                                .splide__slide
+                                    a(href='/img/common/pr2.jpg' data-fslightbox="gallery"): +picture('/img/common/pr2')
+                                .splide__slide
+                                    a(href='/img/common/pr3.jpg' data-fslightbox="gallery"): +picture('/img/common/pr3')
+                                .splide__slide
+                                    a(href='/img/common/pr4.jpg' data-fslightbox="gallery"): +picture('/img/common/pr4')
+                                .splide__slide
+                                    a(href='/img/common/pr5.jpg' data-fslightbox="gallery"): +picture('/img/common/pr5')

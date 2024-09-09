@@ -1,4 +1,25 @@
 mixin form-block
     section.section-form-block
         .container 
-            .form-block form-block
+            .form-block
+                .form-block__wrp
+                    .form-block__left
+                        .form-block__title 
+                            h2 Want to get your project done?
+                        .form-block__desc Complete the form below and receive a full analysis of your business within 2 days!
+
+                    .form-block__right
+                        form(action='#' method='POST')
+                            .form
+                                .form__item
+                                    .form__subitem
+                                        input(type="text" placeholder="Name")
+                                .form__item
+                                    .form__subitem
+                                        input(type="text" placeholder="Phone Number")
+                                .form__item
+                                    .form__subitem
+                                        input(type="text" placeholder="Text")
+                                .form__item
+                                    .form__subitem
+                                        button.btn request a quote

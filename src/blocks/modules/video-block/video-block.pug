@@ -1,4 +1,12 @@
+include ../../components/video/video.pug
+
 mixin video-block
     section.section-video-block
         .container 
-            .video-block video-block
+            .video-block
+                .video-block__title Check out Our Latest Projects
+                .video-block__player
+                    +video({
+                        'preview': '//img.youtube.com/vi/ASmmG7eYj2E/maxresdefault',
+                        'link': 'https://www.youtube.com/watch?v=ASmmG7eYj2E'
+                    })

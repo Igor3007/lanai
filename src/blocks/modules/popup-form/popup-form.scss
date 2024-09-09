@@ -1,6 +1,13 @@
 .popup-form {
     padding: 20px 15px;
     max-width: 490px;
+    background-image: linear-gradient(180deg, #111015, #b28e8e);
+    background-color: #fff;
+    text-align: center;
+
+    @media screen and (min-width: $w760) {
+        padding: 60px;
+    }
 
 
     @media screen and (min-width: $w576) {
@@ -10,64 +17,25 @@
     &__title {
         @include font-h3;
         padding-bottom: 12px;
-        color: var(--color-accent-1);
+        color: #fff;
+
     }
 
     &__desc {
         line-height: 150%;
         padding-bottom: 25px;
         font-size: 16px;
+        color: #fff;
 
-        color: var(--color-text-2);
+
     }
 
-    &__name {
-        font-weight: bold;
-        color: var(--green);
-        font-size: 18px;
-        padding-bottom: 12px;
-        line-height: 130%;
+    &__form {
+        display: flex;
+        justify-content: space-between;
     }
 
-    & .form {
 
-        &__subitem {
-            &>label {
-                background-color: #fff;
-            }
-
-            & .btn {
-                margin-top: 15px;
-            }
-        }
-
-        & .checkbox__text {
-            @media screen and (max-width: 400px) {
-                text-align: left;
-                width: auto;
-                max-width: 172px;
-            }
-        }
-
-
-
-        &__note {
-            text-align: center;
-            margin-top: 10px;
-            color: var(--color-text-2);
-            font-size: 13px;
-        }
-
-        & input[type=date],
-        & input[type=tel],
-        & input[type=password],
-        & input[type=text],
-        & input[type=email] {
-            @media screen and (min-width: $w1440) {
-                height: 52px;
-            }
-        }
-    }
 }
 
 .popup-success {

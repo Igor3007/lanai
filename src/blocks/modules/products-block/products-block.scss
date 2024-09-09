@@ -1,0 +1,147 @@
+.section-products-block {
+    padding: 50px 0;
+
+    @media screen and (min-width: $w992) {
+        padding-top: 110px;
+    }
+}
+
+
+.products-block {
+
+
+
+    &__intro {
+
+        background-image: linear-gradient(180deg, #e93415, #ff7961);
+
+
+        font-size: 32px;
+        line-height: 130%;
+        font-weight: 600;
+        color: #fff;
+        padding: 40px;
+        text-align: center;
+        margin-bottom: 60px;
+
+        @media screen and (min-width: $w760) {
+            font-size: 45px;
+        }
+    }
+
+    &__textmax {
+
+        background-image: linear-gradient(180deg, #f96526, #ff7961);
+
+
+        font-size: 32px;
+        line-height: 130%;
+        font-weight: 600;
+        color: #222;
+        padding: 40px;
+        text-align: center;
+
+
+        & span {
+            color: #fff;
+        }
+
+        @media screen and (min-width: $w760) {
+            font-size: 45px;
+        }
+    }
+
+    &__list {
+        padding-bottom: 36px;
+    }
+
+    &__item {
+        @media screen and (min-width: $w760) {
+            display: flex;
+        }
+    }
+
+    &__main {
+
+
+
+        @media screen and (min-width: $w992) {
+            width: 65%;
+            padding-left: 24px;
+        }
+    }
+
+    &__title {
+        font-weight: bold;
+        font-size: 22px;
+        padding-bottom: 16px;
+    }
+
+    &__image {
+        padding-bottom: 24px;
+
+        @media screen and (min-width: $w760) {
+            width: 25%;
+        }
+
+        & picture {
+            @include picture(78%, contain);
+        }
+    }
+
+    &__desc {
+        padding-bottom: 24px;
+
+        @media screen and (min-width: $w576) {
+            font-size: 16px;
+        }
+    }
+
+    &__logo {
+
+        padding-bottom: 36px;
+
+        & ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        & li {
+            @media screen and (min-width: $w760) {
+                width: 28%;
+            }
+        }
+
+        & .bgimage {
+            width: 100px;
+            height: 50px;
+            @include bgimage-contain;
+
+            @media screen and (min-width: $w576) {
+                width: 100%;
+                height: 80px;
+                background-position-x: left;
+            }
+        }
+    }
+}
+
+.line-header {
+    font-size: 19px;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 24px;
+    line-height: 130%;
+
+    &::after {
+        content: '';
+        width: 60px;
+        height: 2px;
+        background-color: #f00;
+        display: block;
+        margin-top: 16px;
+    }
+}

@@ -1,6 +1,10 @@
 .header {
 
-    padding: 12px 0;
+    padding: 6px 0;
+
+    @media screen and (min-width: $w576) {
+        padding: 12px 0;
+    }
 
     @media screen and (min-width: $w1440) {
         padding: 20px 0;
@@ -12,18 +16,37 @@
     }
 
     &__burger {
-        display: none;
+
+        margin-left: 10px;
+
+        @media screen and (min-width: $w1024) {
+            display: none;
+        }
     }
 
     &__logo {
         & .bgimage {
-            width: 154px;
-            height: 100px;
-            @include bgimage-contain;
+            width: 60px;
+            height: 60px;
+            display: inline-block;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+
+            @media screen and (min-width: $w760) {
+                width: 154px;
+                height: 100px;
+                @include bgimage-contain;
+            }
         }
     }
 
     &__nav {
+
+        @media screen and (max-width: $w1024) {
+            display: none;
+        }
 
         @media screen and (min-width: $w1440) {
             padding-left: 30px;
@@ -37,6 +60,14 @@
 
                 @media screen and (min-width: $w1440) {
                     padding: 0 18px;
+                }
+
+                & a {
+                    transition: 0.3s ease;
+
+                    &:hover {
+                        color: var(--main);
+                    }
                 }
             }
         }
@@ -60,5 +91,65 @@
     & a {
         font-weight: 800;
         font-size: 17px;
+
+        @media screen and (max-width: $w480) {
+            font-size: 14px;
+        }
+    }
+}
+
+.header-callback {
+    & svg {
+        @media screen and (max-width: $w480) {
+            display: none;
+        }
+    }
+
+    & .btn {
+        @media screen and (max-width: $w576) {
+            padding: 5px 20px;
+            min-width: auto;
+            height: 36px;
+        }
+    }
+}
+
+.header__nav.is-open {
+    position: absolute;
+    display: block;
+    background-color: #fff;
+    top: 78px;
+    z-index: 6;
+    left: 0;
+    right: 0;
+    padding: 16px;
+    border-top: 1px solid #eee;
+    display: block;
+
+    @media screen and (min-width: $w576) {
+        left: auto;
+        width: 320px;
+        right: 0;
+        margin-left: auto;
+        top: 89px;
+    }
+
+    & ul {
+        display: flex;
+        flex-direction: column;
+
+        & li {
+            padding: 10px 5px;
+
+            & a {
+                font-size: 16px;
+                font-weight: 600;
+
+                &:hover {
+                    color: var(--main);
+                }
+
+            }
+        }
     }
 }

@@ -1,25 +1,8 @@
 mixin popup-form(data)
    .popup-form
         .popup-form__wrp
-            .popup-form__title= data.title
-            .popup-form__desc= data.desc
+            .popup-form__title Want to get your project done?
+            .popup-form__desc Contact us to discuss your project <br> and get the most fair offer.
             .popup-form__form
-                form(action="/action.php")
-                    .form
-                        .form__item
-                            .form__subitem
-                                input(type="text" placeholder="Ваше имя")
-                        .form__item
-                            .form__subitem
-                                input(type="text" placeholder="Контактный телефон *" data-maska="+7(###)###-##-##" required)
-                        .form__item
-                            .form__subitem
-                                textarea(placeholder="Текст вопроса или сообщения")
-                        .form__item
-                            .form__subitem.form__subitem--free
-                                button.btn.btn-full Отправить
-                        .form__item
-                            .form__subitem.form__subitem--free
-                                .form__note Нажимая на кнопку, вы даёте согласие на обработку персональных данных согласно нашей <a href="policy.html" >Политикой конфиденциальности</a>
-                                    
-                                    
+                a(href='tel:+13057777886'): button.btn Call us
+                a(href='#form'): button.btn.btn-line Write to us

@@ -1,0 +1,51 @@
+.section-digits-block {
+    background-color: #1b1a1f;
+    padding: 70px 0;
+    color: #fff;
+}
+
+.digits-block {
+    &__list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        @media screen and (min-width: $w760) {
+            flex-direction: row;
+        }
+    }
+
+    &__item {
+        @media screen and (min-width: $w1200) {
+            width: 25%;
+        }
+
+        @media screen and (min-width: $w992) {
+            width: 33.33%;
+        }
+
+        @media screen and (min-width: $w760) {
+            width: 50%;
+        }
+    }
+
+    &__item {
+        text-align: center;
+    }
+
+    &__num {
+        font-size: 46px;
+        font-weight: 700;
+        line-height: 140%;
+    }
+
+    &__desc {
+        padding: 12px 0;
+        font-size: 18px;
+    }
+
+    &__small {
+        font-size: 13px;
+        color: var(--main);
+    }
+}

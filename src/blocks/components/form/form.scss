@@ -9,19 +9,20 @@
 
          font-size: 14px;
          line-height: 15px;
-         padding-left: rem(15);
-         padding-right: rem(15);
+         padding-left: rem(24);
+         padding-right: rem(24);
          padding-top: 10px;
          padding-bottom: 10px;
          box-sizing: border-box;
          width: auto;
          flex-grow: 1;
 
-         border-radius: 8px;
-         border: 2px solid var(--color-borders-2);
+         border-radius: 40px;
+         border: none;
          width: 100%;
          color: var(--color-text-1);
          height: 50px;
+         background-color: #eee;
 
          @media screen and (min-width: $w576) {
              height: 52px;

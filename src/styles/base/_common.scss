@@ -34,10 +34,10 @@
 
 .splide {
     &__arrow {
-        width: 52px;
-        height: 52px;
+        width: 46px;
+        height: 46px;
         background-color: #fff;
-        border: 2px solid var(--color-borders-2);
+
         opacity: 1;
         transition: 0.3s ease;
 
@@ -53,14 +53,14 @@
             width: 16px;
             height: 16px;
 
-            fill: var(--color-accent-1);
+            fill: #000;
         }
 
 
 
         &:hover {
-            border-color: var(--color-accent-2);
-            background-color: var(--color-accent-2);
+
+            background-color: var(--main);
             opacity: 1 !important;
 
             & path {
@@ -85,6 +85,16 @@
 .section-page {
     background-color: var(--color-bg-2);
     border-bottom: 2px solid var(--color-borders-2);
+}
+
+.splide__pagination__page.is-active {
+    background: #eb0000;
+    transform: scale(1);
+    z-index: 1;
+}
+
+.splide__pagination {
+    bottom: -40px;
 }
 
 .page {

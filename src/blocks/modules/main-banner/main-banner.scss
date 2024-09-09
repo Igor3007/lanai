@@ -21,13 +21,22 @@
         padding: 50px 0;
         color: #fff;
         min-height: 530px;
+        background-color: #00000038;
     }
 
     &__title {
         padding-bottom: 12px;
 
         & h1 {
-            font-size: 45px;
+            font-size: 28px;
+
+            @media screen and (min-width: $w576) {
+                font-size: 36px;
+            }
+
+            @media screen and (min-width: $w992) {
+                font-size: 45px;
+            }
         }
     }
 

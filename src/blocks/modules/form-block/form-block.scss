@@ -1,0 +1,65 @@
+.section-form-block {
+    padding: 50px 0;
+}
+
+.form-block {
+    &__title {
+
+        padding-bottom: 36px;
+
+        & h2 {
+            font-size: 32px;
+
+
+            @media screen and (min-width: $w576) {
+                font-size: 45px;
+            }
+        }
+
+        @media screen and (max-width: $w992) {
+            text-align: center;
+        }
+    }
+
+    &__desc {
+        font-size: 18px;
+        line-height: 140%;
+        font-weight: 300;
+
+        @media screen and (max-width: $w992) {
+            text-align: center;
+        }
+    }
+
+    &__wrp {
+        @media screen and (min-width: $w992) {
+            display: flex;
+        }
+    }
+
+    &__left {
+
+        padding-bottom: 30px;
+
+        @media screen and (min-width: $w992) {
+            width: 65%;
+            padding-bottom: 0;
+        }
+    }
+
+    &__right {
+
+        max-width: 480px;
+        margin: 0 auto;
+
+        @media screen and (min-width: $w992) {
+            width: 35%;
+        }
+    }
+
+    & .form {
+        & .btn {
+            width: 100%;
+        }
+    }
+}
