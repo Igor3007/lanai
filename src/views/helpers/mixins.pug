@@ -34,6 +34,16 @@ mixin picturePng(url)
   picture
     source(srcset=''+url+'.webp' type="image/webp" )
     img(src=''+url+'.png' loading='lazy' alt='image')
+
+mixin picture_with_mobile(url)
+  picture
+    
+    source(srcset=''+url.w760+'.webp' type="image/webp" media='(min-width: 767px)')
+    source(srcset=''+url.w760+'.jpg' type="image/jpeg" media='(min-width: 767px)')
+
+    source(srcset=''+url.w480+'.webp' type="image/webp" )
+    img(src=''+url.w480+'.png' loading='lazy' alt='image')
+
 mixin pictureResp(url)
   picture
 

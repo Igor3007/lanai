@@ -2,15 +2,18 @@ mixin main-banner
     section.section-main-banner(id="About")
         .main-banner
             .main-banner__bg
-                +picture('/img/common/mainbg')
+                +picture_with_mobile({
+                    w480: '/img/common/mainbg-480',
+                    w760: '/img/common/mainbg',
+                })
             .main-banner__content
                 .container 
                     .main-banner__title: h1 Introducing Lanai101 - Your Trusted Pool <br> and Patio Screen Enclosure Repair <br> Experts in Miami, Florida!
                     .main-banner__desc A dedicated team of professionals is ready to impliment your project
                     .main-banner__btn
-                        a(href="#"): button.btn.btn-line
+                        a(href="#Projects" data-scroll="smooth"): button.btn.btn-line
                             span Learn more
-                        a(href="#"): button.btn  
+                        a(data-modal="/parts/_popup-callback.html"): button.btn  
                             +icons('#ic_cursor')
                             span Click here
 

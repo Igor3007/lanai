@@ -75,11 +75,11 @@
             <div class="header__nav">
               <nav>
                 <ul>
-                  <li><a href="#Services">Services</a></li>
-                  <li><a href="#About">About us</a></li>
-                  <li><a href="#Projects">Projects</a></li>
-                  <li><a href="#Testimonials">Testimonials</a></li>
-                  <li><a href="#Contact">Contact us</a></li>
+                  <li><a href="#Services" data-scroll="smooth">Services</a></li>
+                  <li><a href="#About" data-scroll="smooth">About us</a></li>
+                  <li><a href="#Projects" data-scroll="smooth">Projects</a></li>
+                  <li><a href="#Testimonials" data-scroll="smooth">Testimonials</a></li>
+                  <li><a href="#Contact" data-scroll="smooth">Contact us</a></li>
                 </ul>
               </nav>
             </div>
@@ -109,7 +109,9 @@
               <div class="main-banner">
                 <div class="main-banner__bg">
                   <picture>
-                    <source srcset="/img/common/mainbg.webp" type="image/webp"/><img src="/img/common/mainbg.jpg" loading="lazy" alt="image"/>
+                    <source srcset="/img/common/mainbg.webp" type="image/webp" media="(min-width: 767px)"/>
+                    <source srcset="/img/common/mainbg.jpg" type="image/jpeg" media="(min-width: 767px)"/>
+                    <source srcset="/img/common/mainbg-480.webp" type="image/webp"/><img src="/img/common/mainbg-480.png" loading="lazy" alt="image"/>
                   </picture>
                 </div>
                 <div class="main-banner__content">
@@ -118,8 +120,8 @@
                       <h1>Introducing Lanai101 - Your Trusted Pool <br> and Patio Screen Enclosure Repair <br> Experts in Miami, Florida!</h1>
                     </div>
                     <div class="main-banner__desc">A dedicated team of professionals is ready to impliment your project</div>
-                    <div class="main-banner__btn"><a href="#">
-                        <button class="btn btn-line"><span>Learn more</span></button></a><a href="#">
+                    <div class="main-banner__btn"><a href="#Projects" data-scroll="smooth">
+                        <button class="btn btn-line"><span>Learn more</span></button></a><a data-modal="/parts/_popup-callback.html">
                         <button class="btn"> 
                           <svg width="24" height="24">
                             <use xlink:href="/img/sprites/sprite.svg#ic_cursor"></use>
@@ -186,7 +188,7 @@
                   <div class="formated-text"> <img src="/img/icons/calc.svg" style="max-width: 90px; margin: 0 auto">
                     <h2>Free estimate </h2>
                     <hr>
-                    <h2>Request your quote</h2><a href="#">
+                    <h2>Request your quote</h2><a data-modal="/parts/_popup-callback.html">
                       <button class="btn"> 
                         <svg width="24" height="24">
                           <use xlink:href="/img/sprites/sprite.svg#ic_cursor"></use>
@@ -315,7 +317,7 @@
                 <div class="your-project"> 
                   <div class="your-project__title">Want to get your project done?</div>
                   <div class="your-project__desc">Contact us to discuss your project <br> and get the most fair offer.</div>
-                  <div class="your-project__btn"><a href="#">
+                  <div class="your-project__btn"><a data-modal="/parts/_popup-callback.html">
                       <button class="btn"> 
                         <svg width="24" height="24">
                           <use xlink:href="/img/sprites/sprite.svg#ic_cursor"></use>
@@ -416,7 +418,7 @@
                 </div>
               </div>
             </section>
-            <section class="section-form-block">
+            <section class="section-form-block" id="form">
               <div class="container"> 
                 <div class="form-block">
                   <div class="form-block__wrp">
@@ -431,12 +433,12 @@
                         <div class="form">
                           <div class="form__item">
                             <div class="form__subitem">
-                              <input type="text" placeholder="Name">
+                              <input type="text" placeholder="Name" required>
                             </div>
                           </div>
                           <div class="form__item">
                             <div class="form__subitem">
-                              <input type="text" placeholder="Phone Number">
+                              <input type="tel" placeholder="Phone Number" required>
                             </div>
                           </div>
                           <div class="form__item">

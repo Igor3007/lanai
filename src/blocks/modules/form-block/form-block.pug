@@ -1,5 +1,5 @@
 mixin form-block
-    section.section-form-block
+    section.section-form-block(id="form")
         .container 
             .form-block
                 .form-block__wrp
@@ -13,10 +13,10 @@ mixin form-block
                             .form
                                 .form__item
                                     .form__subitem
-                                        input(type="text" placeholder="Name")
+                                        input(type="text" placeholder="Name" required)
                                 .form__item
                                     .form__subitem
-                                        input(type="text" placeholder="Phone Number")
+                                        input(type="tel" placeholder="Phone Number" required)
                                 .form__item
                                     .form__subitem
                                         input(type="text" placeholder="Text")

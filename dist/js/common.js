@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
     }
 
     if (document.querySelector('.header__nav')) {
-        document.querySelectorAll('.header__nav a').forEach(item => {
+        document.querySelectorAll('[data-scroll="smooth"]').forEach(item => {
             item.addEventListener('click', (e) => {
                 e.preventDefault()
                 scrollToTargetAdjusted({
@@ -304,11 +304,11 @@ document.addEventListener('DOMContentLoaded', function (event) {
 
     function popupSuccess() {
 
-        const instansePopup = new afLightbox({
+        const instancePopup = new afLightbox({
             mobileInBottom: true
         })
 
-        instansePopup.open(`
+        instancePopup.open(`
            <div class="popup-thanks" >
                 <h2> Спасибо! </h2>
                 <p>Мы свяжемся с вами в ближайшее время!</p>
@@ -327,54 +327,24 @@ document.addEventListener('DOMContentLoaded', function (event) {
                     url: item.dataset.modal
                 }, (status, response) => {
 
-                    const instansePopup = new afLightbox({
+                    const instancePopup = new afLightbox({
                         mobileInBottom: true
                     })
 
-                    instansePopup.open(response, (instanse) => {
-                        initMaska()
+                    instancePopup.open(response, (instance) => {
 
-                        if (instanse.querySelector('form')) {
-                            const form = instanse.querySelector('form')
 
-                            form.addEventListener('submit', e => {
-
+                        instance.querySelectorAll('[data-scroll]').forEach(item => {
+                            item.addEventListener('click', (e) => {
                                 e.preventDefault()
+                                scrollToTargetAdjusted({
+                                    elem: document.querySelector(item.getAttribute('href')),
+                                    offset: 0
+                                })
 
-                                const formData = new FormData(e.target)
-                                let params = {}
-                                let btn = form.querySelector('.btn')
-
-                                for (let [name, value] of formData) {
-                                    params[name] = value
-                                }
-
-                                btn.classList.add('btn-loading')
-
-                                /*  window.ajax({
-                                     type: 'POST',
-                                     url: form.getAttribute('action'),
-                                     data: params
-
-                                 }, (status, response) => {
-
-                                     if (status == 200) {
-                                         popupSuccess();
-                                         !btn.classList.contains('btn-loading') || btn.classList.remove('btn-loading')
-                                         instansePopup.close()
-                                     }
-
-
-                                 }) */
-
-                                setTimeout(() => {
-
-                                    popupSuccess();
-                                    !btn.classList.contains('btn-loading') || btn.classList.remove('btn-loading')
-                                    instansePopup.close()
-                                }, 1000)
+                                instancePopup.close()
                             })
-                        }
+                        })
 
 
                     })

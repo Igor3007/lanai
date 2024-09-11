@@ -11,7 +11,7 @@
                 nav
                     ul
                         each item in app.mainMenu
-                            li: a(href=item.href)= item.text
+                            li: a(href=item.href data-scroll="smooth")= item.text
 
             .header__contacts
                 .header__contact

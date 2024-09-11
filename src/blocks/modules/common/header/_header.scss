@@ -95,6 +95,10 @@
         @media screen and (max-width: $w480) {
             font-size: 14px;
         }
+
+        &:hover {
+            color: var(--main);
+        }
     }
 }
 
