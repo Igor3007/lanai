@@ -2142,7 +2142,7 @@ template {
   color: var(--color-text-1);
   height: 50px;
   background-color: #eee;
-  transition: border 0.4s ease;
+  transition: border 0.4s;
 }
 
 .form input[type="text"]::placeholder,
@@ -2173,7 +2173,7 @@ template {
 .form input[type="password"]:required,
 .form input[type="email"]:required,
 .form input[type="tel"]:required {
-  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxwYXRoIGQ9Ik0zLjMgOGwuMTE2LTMuMDU2LTIuNzE1IDEuNjRMMCA1LjQxNiAyLjg2MSA0IDAgMi41ODNsLjctMS4xNjYgMi43MTYgMS42MzlMMy4zIDBoMS40MDJsLS4xMTcgMy4wNTZMNy4zIDEuNDE2IDggMi41ODQgNS4xMzkgNCA4IDUuNDE3bC0uNyAxLjE2Ni0yLjcxNi0xLjYzOUw0LjcgOEgzLjI5OXoiIGZpbGw9IiMwMUFGRDIiLz48L3N2Zz4=);
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSI4IiBmaWxsPSJub25lIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPjxnIGNsaXAtcGF0aD0idXJsKCNwcmVmaXhfX3ByZWZpeF9fY2xpcDBfOTU4XzY1MikiPjxwYXRoIGQ9Ik0zLjMgOGwuMTE2LTMuMDU2LTIuNzE1IDEuNjRMMCA1LjQxNiAyLjg2MSA0IDAgMi41ODNsLjctMS4xNjYgMi43MTYgMS42MzlMMy4zIDBoMS40MDJsLS4xMTcgMy4wNTZMNy4zIDEuNDE2IDggMi41ODQgNS4xMzkgNCA4IDUuNDE3bC0uNyAxLjE2Ni0yLjcxNi0xLjYzOUw0LjcgOEgzLjN6IiBmaWxsPSIjRjU2NzJBIi8+PC9nPjxkZWZzPjxjbGlwUGF0aCBpZD0icHJlZml4X19wcmVmaXhfX2NsaXAwXzk1OF82NTIiPjxwYXRoIGZpbGw9IiNmZmYiIGQ9Ik0wIDBoOHY4SDB6Ii8+PC9jbGlwUGF0aD48L2RlZnM+PC9zdmc+);
   background-repeat: no-repeat;
   background-position: calc(100% - 16px) center;
   padding-right: 32px;
@@ -3156,8 +3156,8 @@ template {
 }
 
 .header__logo .bgimage {
-  width: 60px;
-  height: 60px;
+  width: 55px;
+  height: 55px;
   display: inline-block;
   background-repeat: no-repeat;
   background-position: center;
@@ -3193,6 +3193,7 @@ template {
 .header-phone a {
   font-weight: 800;
   font-size: 17px;
+  white-space: nowrap;
 }
 
 .header-phone a:hover {
@@ -4490,6 +4491,11 @@ template {
   .af-dialog {
     width: 440px;
     padding: 24px;
+  }
+
+  .header__logo .bgimage {
+    width: 60px;
+    height: 60px;
   }
 
   .page-404__row .btn {

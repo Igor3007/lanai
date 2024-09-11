@@ -26,12 +26,17 @@
 
     &__logo {
         & .bgimage {
-            width: 60px;
-            height: 60px;
+            width: 55px;
+            height: 55px;
             display: inline-block;
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
+
+            @media screen and (min-width: $w480) {
+                width: 60px;
+                height: 60px;
+            }
 
 
             @media screen and (min-width: $w760) {
@@ -91,6 +96,8 @@
     & a {
         font-weight: 800;
         font-size: 17px;
+        white-space: nowrap;
+
 
         @media screen and (max-width: $w480) {
             font-size: 14px;
